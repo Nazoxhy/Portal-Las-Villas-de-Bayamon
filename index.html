@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#173f38" />
+  <title>Las Villas de Bayamón · Portal comunitario</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="roles.css" />
+  <link rel="stylesheet" href="login-layout.css" />
+</head>
+<body>
+  <div class="demo-ribbon"><span class="pulse"></span> DEMOSTRACIÓN · Datos ficticios · No se procesan pagos</div>
+  <section class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-brand"><img src="assets/logo-vdb.png" alt="" /><div><b>LAS VILLAS</b><small>DE BAYAMÓN</small></div></div>
+      <div class="eyebrow">PORTAL COMUNITARIO</div><h1>Bienvenido a tu comunidad</h1><p class="login-intro">Inicia sesión para acceder a la información correspondiente a tu rol.</p>
+      <div class="login-role-label">ENTRAR COMO</div><div class="role-picker" id="rolePicker">
+        <button class="role-choice selected" data-role="titular"><span>⌂</span>Titular</button><button class="role-choice" data-role="residente"><span>⌂</span>Residente</button><button class="role-choice" data-role="junta"><span>▥</span>Junta</button><button class="role-choice" data-role="administracion"><span>▤</span>Administración</button><button class="role-choice" data-role="proveedor"><span>⚒</span>Proveedor</button>
+      </div>
+      <form id="loginForm" class="login-form"><label>Email o nombre de usuario<input id="loginUser" autocomplete="username" placeholder="nombre@correo.com" required /></label><label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required /></label><div class="login-options"><label class="remember"><input type="checkbox" /> Mantener sesión</label><button type="button" class="text-link" data-action="forgot">¿Olvidaste tu contraseña?</button></div><button class="button button-primary login-submit" type="submit">Entrar al portal <span>→</span></button></form>
+      <div class="login-demo"><b>Vista de demostración</b><br>Usa cualquier email/usuario y contraseña para explorar el rol seleccionado. No se crea ni valida una cuenta.</div>
+      <div class="login-help">¿Necesitas acceso? <button data-action="contact">Contacta a administración</button><br /><span>¿No tienes cuenta? <button data-open-register>Crear cuenta con invitación</button></span></div>
+    </div>
+    <aside class="login-aside"><div class="aside-pill">LAS VILLAS DE BAYAMÓN <span>·</span> PUERTO RICO</div><div class="aside-copy"><div class="eyebrow">UN ESPACIO PARA TODOS</div><h2>La comunidad,<br />más cerca.</h2><p>Un solo portal para mantenernos informados, organizados y conectados.</p><div class="aside-features"><span>◷ Avisos y calendario</span><span>⚒ Mantenimiento</span><span>◌ Comunidad</span></div></div><div class="aside-bottom">Portal comunitario · versión de demostración</div></aside>
+  </section>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="Las Villas de Bayamón, inicio"><img class="brand-mark" src="assets/logo-vdb.png" alt="Logo de Las Villas de Bayamón" /><span><b>LAS VILLAS</b><small>DE BAYAMÓN</small></span></a>
+      <div class="community-label">COMUNIDAD</div>
+      <nav class="nav-list" aria-label="Navegación principal">
+        <button class="nav-item active" data-page="inicio"><span class="nav-icon">⌂</span>Inicio</button>
+        <button class="nav-item" data-page="cuenta"><span class="nav-icon">◉</span>Mi Cuenta <span class="nav-badge">1</span></button>
+        <button class="nav-item" data-page="reservas"><span class="nav-icon">▦</span>Reservaciones</button>
+        <button class="nav-item" data-page="mantenimiento"><span class="nav-icon">⚒</span>Mantenimiento <span class="nav-badge muted">2</span></button>
+        <button class="nav-item" data-page="documentos"><span class="nav-icon">▤</span>Documentos</button>
+        <button class="nav-item" data-page="comunidad"><span class="nav-icon">◌</span>Comunidad</button>
+        <button class="nav-item" data-page="foro"><span class="nav-icon">☷</span>Foro comunitario</button>
+        <button class="nav-item" data-page="recursos"><span class="nav-icon">⌖</span>Contactos y ayuda</button>
+        <button class="nav-item" data-page="contacto-proveedor"><span class="nav-icon">✉</span>Contactos</button>
+        <button class="nav-item" data-page="votaciones"><span class="nav-icon">✓</span>Votaciones</button>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Preferencias</button>
+        <div class="community-label second-label">GESTIÓN</div>
+        <button class="nav-item" data-page="directorio"><span class="nav-icon">♙</span>Registro de Residentes</button>
+        <button class="nav-item" data-page="servicios"><span class="nav-icon">▣</span>Servicios y Contratos</button>
+        <button class="nav-item" data-page="tasks"><span class="nav-icon">☑</span>Tasks y Autorizaciones</button>
+        <button class="nav-item" data-page="balances"><span class="nav-icon">＄</span>Balances por Apartamentos</button>
+        <button class="nav-item" data-page="gestion"><span class="nav-icon">▥</span>Junta y Administración</button>
+        <button class="nav-item" data-page="contratos"><span class="nav-icon">▣</span>Mis contratos</button>
+        <button class="nav-item" data-page="proveedor-calendario"><span class="nav-icon">▦</span>Calendario de trabajo</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✳</span><b>¿Necesitas ayuda?</b><p>Estamos para ayudarte con tu comunidad.</p><button data-action="contact">Contactar administración <span>↗</span></button></div><div class="user-mini"><div class="avatar" id="userInitials">MR</div><div><b id="userName">María Rivera</b><small id="userRole">Titular · Apartamento 204</small></div><button class="more-button" id="logoutButton" aria-label="Cerrar sesión" title="Cerrar sesión">↪</button></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menuButton" aria-label="Abrir menú">☰</button><div class="breadcrumb">Portal comunitario <span>/</span> <b id="crumb">Inicio</b></div><div class="top-actions"><span class="today" id="today"></span><button class="icon-button notification" id="notifications" aria-label="Notificaciones">♧<i></i></button><div class="top-avatar" id="topAvatar">MR</div></div></header>
+      <div class="content" id="content"></div>
+      <footer>Las Villas de Bayamón <span>·</span> Portal comunitario de demostración <span>·</span> <button data-action="privacy">Privacidad y uso</button></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="dialog"><form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button><div id="dialogContent"></div></form></dialog>
+  <script src="app.js"></script>
+  <script src="roles.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Give the sign-in area the larger share of the desktop layout. */
+.login-screen {
+  grid-template-columns: 60% 40%;
+}
+
+.login-card {
+  width: min(480px, calc(100% - 56px));
+}
+
+@media (max-width: 780px) {
+  .login-screen {
+    grid-template-columns: 1fr;
+  }
+}
